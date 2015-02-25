@@ -14,16 +14,26 @@ header .container, main .container, footer .container {
 header {
   background: white;
   overflow: auto;
+  border-bottom: 3px solid lightgray;
 }
 
 header h1 {
   float: left;
   width: 570px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  color: red;
+  font-size:300%;
+  font-style: italic;
+  font-family: ubuntu;
+
 }
 
 header nav {
   float: right;
   width: 285px;
+  padding-top: 20px;
+  font-family: droid sans;
 }
 
 main {
@@ -34,11 +44,13 @@ main {
 main .left {
   float: left;
   width: 570px;
+  font-family: droid sans;
 }
 
 main .right {
   float: right;
   width: 285px;
+  font-family: droid sans;
 }
 
 footer .left {
@@ -49,4 +61,52 @@ footer .left {
 footer .sitemap {
   float: right;
   width: 285px;
+}
+
+main div.left h1{
+  font-weight: 700;
+  font-size: 200%;
+  padding-top: 20px;
+  padding-bottom:20px;
+  font-family: ubuntu;
+}
+main div.left h4{
+  font-weight: 700;
+  font-family: ubuntu;
+}
+main div.left p{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: droid sans;
+}
+
+footer h5{
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: droid sans;
+}
+
+footer div.contact p:nth-child(2){
+  color: red;
+  font-family: droid sans;
+}
+
+footer .sitemap ul {
+  -webkit-columns: 2;
+  columns: 2;
+  -moz-columns: 2;
+  font-family: droid sans;
+}
+a {
+    color: red;
+    text-decoration: none; /* remove the default underline */
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+    text-decoration: underline;
 }

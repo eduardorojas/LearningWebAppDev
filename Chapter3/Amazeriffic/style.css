@@ -70,7 +70,7 @@ main div.left h1{
   padding-bottom:20px;
   font-family: ubuntu;
 }
-main div.left h4{
+main div.left h2{
   font-weight: 700;
   font-family: ubuntu;
 }
@@ -92,12 +92,15 @@ footer div.contact p:nth-child(2){
   font-family: droid sans;
 }
 
+/*Taken from MDN https://developer.mozilla.org/en-US/docs/Web/CSS/columns*/
 footer .sitemap ul {
   -webkit-columns: 2;
   columns: 2;
   -moz-columns: 2;
   font-family: droid sans;
 }
+
+/* The code below was taken from the textbook*/
 a {
     color: red;
     text-decoration: none; /* remove the default underline */

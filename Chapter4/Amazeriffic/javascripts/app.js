@@ -14,6 +14,11 @@ var main = function () {
             var $content,
                 $input,
                 $button,
+                $slideshow,
+                $screenshot1,
+                $screenshot2,
+                $screenshot3,
+                $screenshot4,
                 i;
 
             $(".tabs a span").removeClass("active");
@@ -48,6 +53,16 @@ var main = function () {
                 $content = $("<div>").append($input).append($button);
                /* Alternatively append() allows multiple arguments so the above
                 can be done with $content = $("<div>").append($input, $button); */
+            } else if ($element.parent().is(":nth-child(4)")){
+                $slideshow = $("<script>");
+                $slideshow.text("jQuery('a.gallery').colorbox({ rel:'group1', slideshow: true });");
+
+                $screenshot1 = $("<li><a class='gallery' href='images/amazeriffic_ch4.png'>Photo_1</a></li>");
+                $screenshot2 = $("<li><a class='gallery' href='images/amazeriffic_ch4_1.png'>Photo_2</a></li>");
+                $screenshot3 = $("<li><a class='gallery' href='images/amazeriffic_ch4_2.png'>Photo_3</a></li>");
+                $screenshot4 = $("<li><a class='gallery' href='images/amazeriffic_ch4_3.png'>Photo_4</a></li>");
+
+                $content = $("<ul>").append($screenshot1,$screenshot2,$screenshot3,$screenshot4,$slideshow);
             }
 
             $("main .content").append($content);

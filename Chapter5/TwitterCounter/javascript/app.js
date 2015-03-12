@@ -5,11 +5,11 @@ var main = function () {
     var $username, $name, $location, $description, $followers, $timezone, $rank, $profile;
     var $twitterinfo;
     $.ajax({
-        url: 'http://api.twittercounter.com/?apikey=4ac456c5f8bde295f068752ca3a4650c&twitter_id=23012194',
+        url: 'http://api.twittercounter.com/?apikey=4ac456c5f8bde295f068752ca3a4650c&twitter_id=23012194&output=jsonp',
         data: {
-            format: 'json'
+            format: 'jsonp'
         },
-        dataType: 'json',
+        dataType: 'jsonp',
         success: function(data){
             
             console.log(data);

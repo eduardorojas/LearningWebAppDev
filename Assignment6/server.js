@@ -1,3 +1,7 @@
+// Server-side code
+/* jshint node: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, strict: true, undef: true, unused: true */
+"use strict";
+
 var express = require("express"),
     http = require("http"),
     app = express(),
@@ -16,27 +20,27 @@ http.createServer(app).listen(3000);
 
 // set up our routes
 app.get("/play/rock", function (req, res) {
-    checkResult("lizard","scissors","paper","spock",res);
+    checkResult("lizard","scissors","paper","spock");
     res.json(resultsObj);
 });
 
 app.get("/play/paper", function (req, res) {
-    checkResult("rock","spock","scissors","lizard",res);
+    checkResult("rock","spock","scissors","lizard");
     res.json(resultsObj);
 });
 
 app.get("/play/scissors", function (req, res) {
-    checkResult("paper","lizard","rock","spock",res);
+    checkResult("paper","lizard","rock","spock");
     res.json(resultsObj);
 });
 
 app.get("/play/lizard", function (req, res) {
-    checkResult("paper","spock","rock","scissors",res);
+    checkResult("paper","spock","rock","scissors");
     res.json(resultsObj);
 });
 
 app.get("/play/spock", function (req, res) {
-    checkResult("rock","scissors","paper","lizard",res);
+    checkResult("rock","scissors","paper","lizard");
     res.json(resultsObj);
 });
 
@@ -46,7 +50,7 @@ app.get("/", function (req, res) {
     res.send("This is the root route!");
 });
 
-function checkResult(w1,w2,l1,l2,res){
+function checkResult(w1,w2,l1,l2){
 
 	var responses = ["rock", "paper", "scissors", "lizard", "spock"];
 	var random_response = responses[Math.floor(Math.random() * responses.length)];

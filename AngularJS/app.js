@@ -17,8 +17,7 @@ app.controller("SimpleAppController", function($scope) {
     //Submit code was based off the example here https://docs.angularjs.org/api/ng/directive/ngSubmit
     $scope.submit = function() {
         if ($scope.new_comment) {
-            $scope.comments.push($scope.new_comment);
-            $scope.new_comment = "";
+            $scope.addComment();
         }
     };
 });

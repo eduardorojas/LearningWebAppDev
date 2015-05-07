@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>A Simple App</title>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body data-ng-app="SimpleApp">
+    <header>
+        <h1>Comments</h1>
+        <p>A simple app that allows a user to input comments</p>
+    </header>
+
+    <main data-ng-controller="SimpleAppController">
+        <section class='comment-input'>
+            <p>Add Your Comment:</p>
+            <form data-ng-submit="submit()">
+                <input data-ng-model="new_comment" />
+                <button data-ng-click="addComment()">+</button>
+            </form>
+        </section>
+
+        <section class='comments'>
+            <p data-ng-repeat="comment in comments">{{ comment }}</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>this work is released into the public domain</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
